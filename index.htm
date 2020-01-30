@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Website of PALASH BANSAL</title>
+		<link rel="shortcut icon" href="images/me.ico" type="image/x-icon">
+		<script type="text/javascript">
+var overwidth=110, overheight=90, overtop=75;
+var overhleft=745,overaleft=845,overpleft=945,overcleft=1045;
+var outhleft=750,outaleft=850,outpleft=950,outcleft=1050;
+var outwidth=100, outheight=80, outtop=80;
+var ld=0;
+function hmover(){
+home.style.left=overhleft+'px';
+home.style.top=overtop+'px';
+home.style.width=overwidth+'px';
+home.style.height=overheight+'px';
+}
+function hmout(){
+home.style.left=outhleft+'px';
+home.style.top=outtop+'px';
+home.style.width=outwidth+'px';
+home.style.height=outheight+'px';
+}
+function amover(){
+about.style.left=overaleft+'px';
+about.style.top=overtop+'px';
+about.style.width=overwidth+'px';
+about.style.height=overheight+'px';
+}
+function amout(){
+about.style.left=outaleft+'px';
+about.style.top=outtop+'px';
+about.style.width=outwidth+'px';
+about.style.height=outheight+'px';
+}
+function pmover(){
+projects.style.left=overpleft+'px';
+projects.style.top=overtop+'px';
+projects.style.width=overwidth+'px';
+projects.style.height=overheight+'px';
+}
+function pmout(){
+projects.style.left=outpleft+'px';
+projects.style.top=outtop+'px';
+projects.style.width=outwidth+'px';
+projects.style.height=outheight+'px';
+}
+function cmover(){
+contact.style.left=overcleft+'px';
+contact.style.top=overtop+'px';
+contact.style.width=overwidth+'px';
+contact.style.height=overheight+'px';
+}
+function cmout(){
+contact.style.left=outcleft+'px';
+contact.style.top=outtop+'px';
+contact.style.width=outwidth+'px';
+contact.style.height=outheight+'px';
+}
+function onloadd(){
+	onloada();
+	onloadd1();
+}
+var i1=-100,now=false;
+function onloadd1(){
+home.src = "images/home.png";
+home.style.position = "absolute";
+home.style.left = outhleft + "px";
+home.style.width = outwidth + "px";
+home.style.height = outheight + "px";
+	if(i1<=outtop){
+		home.style.top = i1 + "px";
+		i1+=2;
+		setTimeout("onloadd1()", 1);
+	}
+	else
+		onloadd2();
+}
+var i2=-100;
+function onloadd2(){
+about.src = "images/about.png";
+about.style.position = "absolute";
+about.style.left = outaleft + "px";
+about.style.width = outwidth + "px";
+about.style.height = outheight + "px";
+	if(i2<=outtop){
+		about.style.top = i2 + "px";
+		i2+=2;
+		setTimeout("onloadd2()", 1);
+	}
+	else
+		onloadd3();
+}
+var i3=-100;
+function onloadd3(){
+projects.src = "images/projects.png";
+projects.style.position = "absolute";
+projects.style.left = outpleft + "px";
+projects.style.width = outwidth + "px";
+projects.style.height = outheight + "px";
+	if(i3<=outtop){
+		projects.style.top = i3 + "px";
+		i3+=2;
+		setTimeout("onloadd3()", 1);
+	}
+	else
+		onloadd4();
+}
+var i4=-100;
+function onloadd4(){
+contact.src = "images/contact.png";
+contact.style.position = "absolute";
+contact.style.left = outcleft + "px";
+contact.style.width = outwidth + "px";
+contact.style.height = outheight + "px";
+	if(i4<=outtop){
+		contact.style.top = i4 + "px";
+		i4+=2;
+		setTimeout("onloadd4()", 1);
+	}
+	else{
+		now=true;
+		noww1();
+	}
+}
+var firstt=true;
+function noww1(){
+if(now){
+still=false;
+hidee();
+home.src = 'images/home_c.png';
+body1.style.position = "absolute";
+body1.src= 'images/welcome.png';
+body1.style.display = 'block';
+if(firstt)
+	anime1();
+else{
+	bleft=650;
+	bwidth=0;
+	anime2();
+	}
+}
+}
+var bleft=0,btop=0,bwidth=0,bheight=0;
+function anime1(){
+firstt=false;
+	if(bleft<400)
+		bleft+=3;
+	if(btop<300)
+		btop+=3;
+	if(bwidth<850)
+		bwidth+=4;
+	if(bheight<300)
+		bheight+=2;
+	body1.style.left = bleft + "px";
+	body1.style.top = btop + "px";
+	body1.style.width = bwidth + "px";
+	body1.style.height = bheight + "px";
+	setTimeout("anime1()", 1);
+}
+function anime2(){
+if(bleft>400)
+	bleft-=2;
+if(bwidth<850)
+	bwidth+=2;
+	body1.style.left = bleft + "px";
+	body1.style.width = bwidth + "px";
+	setTimeout("anime2()", 1);
+}
+function noww2(){
+if(now){
+still=false;
+hidee();
+window.open('PALASH_BANSAL_Resume.pdf','_blank');
+about.src = 'images/about_c.png';
+body1.src= 'images/about1.png';
+body1.style.display = 'block';
+	bleft=650;
+	bwidth=0;
+anime2();
+}
+}
+function noww3(){
+if(now){
+hidee();
+projects.src = 'images/projects_c.png';
+chd=1;
+still=true;
+setTimeout('begin()',500);
+}
+}
+var chd=1,still=true;
+function begin(){
+if(still){
+switch(chd){
+	case 1: action.style.display = 'block';
+	break;
+	case 2: mycalci.style.display = 'block';
+	break;
+	case 3: hanoi.style.display = 'block';
+	break;
+	case 4: kppintdec.style.display = 'block';
+	break;
+	case 5: magic.style.display = 'block';
+	break;
+	case 6: mst.style.display = 'block';
+	break;
+	case 7: musicmania.style.display = 'block';
+	break;
+	}
+if(chd<=7){
+	chd++;
+	setTimeout('begin()',250);
+	}
+}
+}
+function hidee(){
+body1.style.display = 'none';
+home.src = 'images/home.png';
+about.src = 'images/about.png';
+projects.src = 'images/projects.png';
+contact.src = 'images/contact.png';
+contact1.style.display = 'none';
+contact2.style.display = 'none';
+contact3.style.display = 'none';
+contact4.style.display = 'none';
+action.style.display = 'none';
+mycalci.style.display = 'none';
+hanoi.style.display = 'none';
+kppintdec.style.display = 'none';
+magic.style.display = 'none';
+mst.style.display = 'none';
+musicmania.style.display = 'none';
+}
+function noww4(){
+if(now){
+still=false;
+hidee();
+contact.src = 'images/contact_c.png';
+contact1.style.display = 'block';
+contact2.style.display = 'block';
+contact3.style.display = 'block';
+contact4.style.display = 'block';
+c1=800;
+c2=40;
+animec();
+}
+}
+var c1=800, c2=40;
+function animec(){
+	if(c1>270){
+		contact1.style.left=c1 + "px";
+		c1-=5;
+	}
+	if(c2<570){
+		contact2.style.left=c2 + "px";
+		contact3.style.left=c2 + "px";
+		contact4.style.left=c2 + "px";
+		c2+=5;
+	}
+	setTimeout("animec()", 1);
+}
+var arr=true;
+function onloada(){
+if(arr){
+arrow.style.left = 490 + 'px';
+arr=false;
+}
+else{
+arrow.style.left = 525 + 'px';
+arr=true;
+}
+setTimeout("onloada()", 500);
+}
+		</script>
+	</head>
+	<body onLoad="onloadd();" background="images/bg.png" style="background-repeat:no-repeat; background-size: 100%">
+<img name="body1" />
+<img src="images/psh.png" alt="Palash Bansal" style="position: absolute; left: -1px; height:669px; z-index:1;" />
+<img src="images/PalashBansal.png"  alt="Palash Bansal" style="position: absolute; left: 220px; top:-25px; z-index:0;" />
+<img src="images/abt.png" alt="Software Programmer | Graphics Designer | HTML Developer" style="position: absolute; left: 240px; top:110px;" />
+
+<a href="http://www.palashbansal4u.blogspot.in" alt="/* myTechBlog */" target="_blank" title="Click here" ><img src="images/myTechBlog.png" style="position: absolute; left:150px; top:620px; width:351px; height:56px; z-index:2;"  onMouseOver="this.style.left=145+'px';this.style.top=615+'px';this.style.width=361+'px';this.style.height=61+'px';" onMouseOut="this.style.left=150+'px';this.style.top=620+'px';this.style.width=351+'px';this.style.height=56+'px';" /></a>
+<img src="images/arrow.png" name="arrow" alt="<< Visit my blog <<" style="position: absolute; left: 525px; top:625px;" />
+<a href="#" alt="Home" title="Home"><img name="home" onMouseOver="hmover()" onMouseOut="hmout()" onClick="noww1()" ></a>
+<a href="#"  alt="About" title="About"><img name="about" onMouseOver="amover()" onMouseOut="amout()" onClick="noww2()" ></a>
+<a href="#" alt="Projects" title="Projects"><img name="projects" onMouseOver="pmover()" onMouseOut="pmout()" onClick="noww3()" ></a>
+<a href="#" alt="Contact" title="Contact"><img name="contact" onMouseOver="cmover()" onMouseOut="cmout()" onClick="noww4()" ></a>
+
+		<img src="images/contact1.png" alt="Mobile: +91-9997040650  Gmail: palash.bansal20@gmail.com" name="contact1" style="position: absolute; left: 270px; top:210px; display:none;" />
+		<a href="http://www.facebook.com/psh.bansal" alt="Facebook: http://www.facebook.com/pshbansal" target="_blank" title="Facebook profile" ><img name="contact2" src="images/contact2.png" style="position: absolute; left:570px; top:359px; width:552px; height:45px; display:none;"  onMouseOver="this.style.left=565+'px';this.style.top=354+'px';this.style.width=562+'px';this.style.height=55+'px';" onMouseOut="this.style.left=570+'px';this.style.top=359+'px';this.style.width=552+'px';this.style.height=45+'px';" /></a>
+		<a href="http://www.freelancer.com/u/PalashBansal.html" alt="Freelancer: http://www.freelancer.com/u/PalashBansal.html" target="_blank" title="Freelancer profile" ><img name="contact3" src="images/contact3.png" style="position: absolute; left:570px; top:410px; width:572px; height:41px; display:none;"  onMouseOver="this.style.left=565+'px';this.style.top=405+'px';this.style.width=582+'px';this.style.height=51+'px';" onMouseOut="this.style.left=570+'px';this.style.top=410+'px';this.style.width=572+'px';this.style.height=41+'px';" /></a>
+		<a href="http://www.linkedin.com/pub/palash-bansal/77/961/668" alt="Linkedin: http://www.linkedin.com/pub/palash-bansal/77/961/668" target="_blank" title="Linkedin profile" ><img name="contact4" src="images/contact4.png" style="position: absolute; left:570px; top:457px; width:577px; height:40px; display:none;"  onMouseOver="this.style.left=565+'px';this.style.top=452+'px';this.style.width=587+'px';this.style.height=50+'px';" onMouseOut="this.style.left=570+'px';this.style.top=457+'px';this.style.width=577+'px';this.style.height=40+'px';" /></a>
+		
+		<img name="previeww" style="position: absolute; left:960px; top:200px; width:380px; height:300px; display:none;" />
+		
+		<a href="http://www.mediafire.com/download/1owckofo2dnabhn/action.rar"  target="_blank" title="'Action' is a flash animated script on macromedia flash" ><img name="action" src="projects_img/1.png" style="position: absolute; left:450px; top:200px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/1.png';this.src='projects_img/1c.png';this.style.left=455+'px';this.style.top=205+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/1.png';this.style.left=450+'px';this.style.top=200+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/vuzq3qd0vc3zz0t/Calculator_1.0.0v01.rar"  target="_blank" title="Calculator 1.0.0v01 is a GUI application on C# famous as a utility" ><img name="mycalci" src="projects_img/2.png" style="position: absolute; left:650px; top:200px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/2.png';this.src='projects_img/2c.png';this.style.left=655+'px';this.style.top=205+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/2.png';this.style.left=650+'px';this.style.top=200+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/bzs8913bavi0qbu/Hanoi_src.rar"  target="_blank" title="Hanoi is a game made on C#.net" ><img name="hanoi" src="projects_img/3.png" style="position: absolute; left:600px; top:350px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/3.png';this.src='projects_img/3c.png';this.style.left=605+'px';this.style.top=355+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/3.png';this.style.left=600+'px';this.style.top=350+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/r84s2s2y2lwkxwv/KPP_Interior_Decorator.rar"  target="_blank" title="KPP Interior Decorator is a dashing html website for a decoration showroom" ><img name="kppintdec" src="projects_img/4.png" style="position: absolute; left:800px; top:350px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/4.png';this.src='projects_img/4c.png';this.style.left=805+'px';this.style.top=355+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/4.png';this.style.left=800+'px';this.style.top=350+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/42dx9vfgaky69ih/magic.rar"  target="_blank" title="'magic' is flash animation script by taking title from 'illusionist' movie" ><img name="magic" src="projects_img/5.png" style="position: absolute; left:750px; top:500px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/5.png';this.src='projects_img/5c.png';this.style.left=755+'px';this.style.top=505+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/5.png';this.style.left=750+'px';this.style.top=500+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/hfl9qlxhh2hfafn/MST.rar"  target="_blank" title="'mst' stands for minimum spanning tree. This C program is an implementation of very efficient 'reverse deleting algo' with graphics display" ><img name="mst" src="projects_img/6.png" style="position: absolute; left:950px; top:500px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/6.png';this.src='projects_img/6c.png';this.style.left=955+'px';this.style.top=505+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/6.png';this.style.left=950+'px';this.style.top=500+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+		<a href="http://www.mediafire.com/download/nzt8izs4a4job84/MusicMania.rar"  target="_blank" title="'music mania' is a music store website developed in asp.net" ><img name="musicmania" src="projects_img/7.png" style="position: absolute; left:1150px; top:520px; width:150px; height:150px; display:none;"  onMouseOver="previeww.style.display='block';previeww.src='projects_img/7.png';this.src='projects_img/7c.png';this.style.left=1155+'px';this.style.top=525+'px';this.style.width=140+'px';this.style.height=140+'px';" onMouseOut="previeww.style.display='none';this.src='projects_img/7.png';this.style.left=1150+'px';this.style.top=520+'px';this.style.width=150+'px';this.style.height=150+'px';" /></a>
+
+		
+<div style="position:absolute; left:1200px; top:20px;">			
+<a  alt="Facebook Share" href="#" 
+onclick="
+window.open(
+'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+'facebook-share-dialog', 
+'width=626,height=436'); 
+return false;">
+<img src="images/fbshare.png" />
+</a>
+</div>
+<div style="position:absolute; left:1200px; top:80px;">
+<div alt="g+ Share" class="g-plus" data-action="share" data-annotation="bubble" data-href="http://www.palashbansal.hostei.com"></div>
+<script type="text/javascript">
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = false;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</div>
+<div  style="position:absolute; left:1200px; top:110px;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.palashbansal.hostei.com" data-text="Check out this site">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+<div  style="position:absolute; left:1200px; top:140px;">
+<a href="https://twitter.com/PalashBansal" class="twitter-follow-button" data-show-count="false">Follow @PalashBansal</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+
+	</body>
+</html>
